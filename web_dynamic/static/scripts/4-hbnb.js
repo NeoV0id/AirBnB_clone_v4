@@ -2,6 +2,7 @@ $(document).ready(function () {
   const myId = {};
   $('input[type=checkbox]').change(function () {
     if ($(this).prop('checked')) {
+      $.post('4-hbnb.html.places_search', 'data-id')
       myId[$(this).attr('data-id')] = $(this).attr('data-name');
     } else {
       delete myId[$(this).attr('data-id')];
